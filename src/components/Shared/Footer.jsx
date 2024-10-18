@@ -6,10 +6,10 @@ export default function Footer() {
     return (
         <div className='bg-[#202124] text-white'>
             <div className="max-w-screen-2xl px-2 mx-auto ">
-                <div className="w-full lg:flex  text-white text-2xl p-10">
-                    <div className='lg:w-1/2 flex justify-center   '>
-                        <div>
-                            <div className='flex gap-5'>
+                <div className="w-full lg:flex justify-center  text-white text-2xl p-10">
+                    <div className='w-full lg:w-1/2 flex justify-center bg-red-200'>
+                        <div className='lg:w-4/5 '>
+                            <div className='flex gap-5 justify-center'>
                                 <div className='w-40'>
                                     <Image
                                         src="/footer/mastercard.png"
@@ -30,7 +30,7 @@ export default function Footer() {
                                 </div>
 
                             </div>
-                            <div className='mt-10 pr-10'>
+                            <div className='mt-10 '>
                                 <p className='mb-5'>Legal responsible: - Reservadeportes Demo </p>
                                 <p>Accepted payment methods:</p>
                                 <p>VISA/MASTERCARD</p>
@@ -43,9 +43,9 @@ export default function Footer() {
                         </div>
 
                     </div>
-                    <div className='lg:w-1/2 flex justify-center mt-10 lg:mt-0'>
+                    <div className='w-full lg:w-1/2 flex justify-center mt-10 lg:mt-0 bg-green-200'>
                         <div className=''>
-                            <div className='w-48'>
+                            <div className='w-48 mx-auto'>
                                 <Image
                                     src="/logo/logo.png"
                                     alt="Google Play"
