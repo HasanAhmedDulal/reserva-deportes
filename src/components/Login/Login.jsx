@@ -7,7 +7,7 @@ export default function Login() {
         <div className="flex items-center justify-center  py-16">
             <div className="space-y-5 lg:space-y-0 flex-row-reverse lg:flex overflow-hidden gap-5 ">
                 {/* Left Section */}
-                <div className="lg:w-w-[500px] p-8  border border-secondary rounded-[20px] ">
+                <div className="lg:w-[500px] p-8  border border-secondary rounded-[20px] ">
                     <h2 className="text-2xl lg:text-4xl font-bold text-center text-blue-600 mb-16 ">LOGIN NOW</h2>
 
                     <form className="space-y-10">

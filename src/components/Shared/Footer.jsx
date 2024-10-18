@@ -7,7 +7,7 @@ export default function Footer() {
         <div className='bg-[#202124] text-white'>
             <div className="max-w-screen-2xl px-2 mx-auto ">
                 <div className="w-full lg:flex justify-center  text-white text-2xl p-10">
-                    <div className='w-full lg:w-1/2 flex justify-center '>
+                    <div className='w-full lg:w-1/2 flex justify-start bg-red-200'>
                         <div className='lg:w-4/5 '>
                             <div className='flex gap-5 justify-center'>
                                 <div className='w-40'>
@@ -43,7 +43,7 @@ export default function Footer() {
                         </div>
 
                     </div>
-                    <div className='w-full lg:w-1/2 flex justify-center mt-10 lg:mt-0'>
+                    <div className='w-full lg:w-1/2 flex justify-end mt-10 lg:mt-0 bg-green-200'>
                         <div className=''>
                             <div className='w-48 mx-auto'>
                                 <Image
