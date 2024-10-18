@@ -8,24 +8,29 @@ export default function Footer() {
             <div className="max-w-screen-2xl px-2 mx-auto ">
                 <div className="w-full lg:flex  text-white text-2xl p-10">
                     <div className='lg:w-1/2 flex justify-center   '>
-                        <div className=''>
-                            <div className='flex justify-center  gap-5 '>
-                                <Image
-                                    src="/footer/mastercard.png"
-                                    alt="Google Play"
-                                    width={250}
-                                    height={150}
-                                />
+                        <div>
+                            <div className='flex gap-5'>
+                                <div className='w-40'>
+                                    <Image
+                                        src="/footer/mastercard.png"
+                                        alt="Google Play"
+                                        width={500}
+                                        height={500}
+                                    />
+                                </div>
 
-                                <Image
-                                    src="/footer/visa.png"
-                                    alt="Google Play"
-                                    width={250}
-                                    height={150}
+                                <div className='w-40'>
+                                    <Image
+                                        src="/footer/visa.png"
+                                        alt="Google Play"
+                                        width={500}
+                                        height={500}
 
-                                />
+                                    />
+                                </div>
+
                             </div>
-                            <div className='mt-10 px-14'>
+                            <div className='mt-10 pr-10'>
                                 <p className='mb-5'>Legal responsible: - Reservadeportes Demo </p>
                                 <p>Accepted payment methods:</p>
                                 <p>VISA/MASTERCARD</p>
@@ -38,9 +43,9 @@ export default function Footer() {
                         </div>
 
                     </div>
-                    <div className='lg:w-1/2 flex justify-center    '>
+                    <div className='lg:w-1/2 flex justify-center mt-10 lg:mt-0'>
                         <div className=''>
-                            <div className='flex justify-center '>
+                            <div className='w-48'>
                                 <Image
                                     src="/logo/logo.png"
                                     alt="Google Play"
@@ -50,11 +55,11 @@ export default function Footer() {
 
                                 />
                             </div>
-                            <div className='space-y-2 '>
+                            <div className='space-y-5 '>
                                 <h6 className="text-white">Contact Us</h6>
                                 <p>Email: info@reservadeportes.com</p>
                                 <p> Phone: +983049171</p>
-                                <div className="flex justify-center space-x-10 p-5 ">
+                                <div className="flex gap-10">
                                     <Link href={''}><svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="35"
@@ -95,8 +100,8 @@ export default function Footer() {
             </div>
 
 
-            <div className=' footer-center  p-8 text-xl'>
-                <p>Copyright © {new Date().getFullYear()} powered by ReservaDeportes ® Reservadeportes Demo | <Link href={'https://info@reservadeportes.com'}>info@reservadeportes.com</Link></p>
+            <div className=' footer-center  p-16 text-xl'>
+                <p>Copyright © {new Date().getFullYear()} powered by ReservaDeportes ® Reservadeportes Demo | info@reservadeportes.com</p>
             </div>
         </div>
     )
