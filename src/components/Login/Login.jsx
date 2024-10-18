@@ -5,38 +5,9 @@ export default function Login() {
     return (
 
         <div className="flex items-center justify-center  py-16">
-            <div className="space-y-5 lg:space-y-0 lg:flex overflow-hidden gap-5 ">
+            <div className="space-y-5 lg:space-y-0 flex-row-reverse lg:flex overflow-hidden gap-5 ">
                 {/* Left Section */}
-                <div className="lg:w-96 p-8  border border-secondary rounded-[20px] ">
-                    <h2 className="text-2xl font-bold mb-6">Description</h2>
-
-                    <ul className="space-y-4">
-                        <li className="flex items-start">
-                            <span className="mr-2 text-blue-500">▶</span>
-                            Create an account on ReservaDeportes by clicking here.
-                        </li>
-                        <li className="flex items-start">
-                            <span className="mr-2 text-blue-500">▶</span>
-                            Check your email to activate your account (check spam/junk if not found).
-                        </li>
-                        <li className="flex items-start">
-                            <span className="mr-2 text-blue-500">▶</span>
-                            Identify yourself with your data.
-                        </li>
-                        <li className="flex items-start">
-                            <span className="mr-2 text-blue-500">▶</span>
-                            [FOR MEMBERS] Clubs need to validate your data before accepting you.
-                        </li>
-                        <li className="flex items-start">
-                            <span className="mr-2 text-blue-500">▶</span>
-                            Youll receive an email once accepted to book your court online.
-                        </li>
-                    </ul>
-
-                </div>
-
-                {/* Right Section */}
-                <div className="lg:w-96 p-8  border border-secondary rounded-[20px]  ">
+                <div className="lg:w-full p-8  border border-secondary rounded-[20px]">
                     <h2 className="text-2xl font-bold text-center text-blue-600 mb-6">LOGIN NOW</h2>
 
                     <form className="space-y-4">
@@ -102,6 +73,35 @@ export default function Login() {
 
                         </div>
                     </div>
+                </div>
+
+                {/* Right Section */}
+                <div className="lg:w-full p-8  border border-secondary rounded-[20px]">
+                    <h2 className="text-2xl font-bold mb-6">Description</h2>
+
+                    <ul className="space-y-4">
+                        <li className="flex items-start">
+                            <span className="mr-2 text-blue-500">▶</span>
+                            Create an account on ReservaDeportes by clicking here.
+                        </li>
+                        <li className="flex items-start">
+                            <span className="mr-2 text-blue-500">▶</span>
+                            Check your email to activate your account (check spam/junk if not found).
+                        </li>
+                        <li className="flex items-start">
+                            <span className="mr-2 text-blue-500">▶</span>
+                            Identify yourself with your data.
+                        </li>
+                        <li className="flex items-start">
+                            <span className="mr-2 text-blue-500">▶</span>
+                            [FOR MEMBERS] Clubs need to validate your data before accepting you.
+                        </li>
+                        <li className="flex items-start">
+                            <span className="mr-2 text-blue-500">▶</span>
+                            Youll receive an email once accepted to book your court online.
+                        </li>
+                    </ul>
+
                 </div>
             </div>
         </div>
