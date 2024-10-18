@@ -7,10 +7,10 @@ export default function Login() {
         <div className="flex items-center justify-center  py-16">
             <div className="space-y-5 lg:space-y-0 flex-row-reverse lg:flex overflow-hidden gap-5 ">
                 {/* Left Section */}
-                <div className="lg:w-full p-8  border border-secondary rounded-[20px]">
-                    <h2 className="text-2xl font-bold text-center text-blue-600 mb-6">LOGIN NOW</h2>
+                <div className="lg:w-w-[500px] p-8  border border-secondary rounded-[20px] ">
+                    <h2 className="text-2xl lg:text-4xl font-bold text-center text-blue-600 mb-16 ">LOGIN NOW</h2>
 
-                    <form className="space-y-4">
+                    <form className="space-y-10">
                         <div>
                             <input
                                 type="email"
@@ -47,28 +47,41 @@ export default function Login() {
                         <button className="bg-gray-100 p-2 rounded-md">Facebook</button>
                     </div>
 
-                    <div className="text-center mt-6">
-                        <p>DOWNLOAD OUR APP</p>
-                        <div className="flex justify-center mt-2">
-                            <div className="w-[150px]  mx-2">
+                    <div className="text-center mt-16">
+                        <p className='text-2xl lg:text-4xl mb-5'>DOWNLOAD OUR APP</p>
+                        <div className="flex justify-center items-center">
+
+                            <Image
+                                src="/qrcode/qrcode.png"
+                                alt="qr code"
+                                width={140}
+                                height={140}
+
+                            />
+
+                            <div className='space-y-1'>
                                 <Image
                                     src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                                     alt="Google Play"
 
-                                    width={1000}
-                                    height={1000}
+                                    width={180}
+                                    height={50}
 
                                 />
-                            </div>
-                            <div className="w-[150px]  mx-2">
                                 <Image
                                     src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
                                     alt="Google Play"
 
-                                    width={1000}
-                                    height={1000}
+                                    width={180}
+                                    height={50}
 
                                 />
+                                <div className="w-[150px]">
+
+                                </div>
+                                <div className="w-[150px]">
+
+                                </div>
                             </div>
 
                         </div>
@@ -76,10 +89,10 @@ export default function Login() {
                 </div>
 
                 {/* Right Section */}
-                <div className="lg:w-full p-8  border border-secondary rounded-[20px]">
-                    <h2 className="text-2xl font-bold mb-6">Description</h2>
+                <div className="lg:w-[500px] p-8  border border-secondary rounded-[20px]">
+                    <h2 className="text-4xl font-bold mb-6">Description</h2>
 
-                    <ul className="space-y-4">
+                    <ul className="space-y-4 text-xl">
                         <li className="flex items-start">
                             <span className="mr-2 text-blue-500">▶</span>
                             Create an account on ReservaDeportes by clicking here.
