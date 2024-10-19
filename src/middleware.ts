@@ -10,7 +10,7 @@ export const middleware = async (request: NextRequest) => {
     const publicPath = path === '/login' || path === '/signup'
     // const token = request.cookies.get('token')?.value || '';
     // __Secure-
-    const token = cookies(request).get('next-auth.session-token');
+    const token = cookies(request).get('__Secure-next-auth.session-token');
     console.log(token?.value)
 
     if (publicPath && token?.value) {
