@@ -10,15 +10,16 @@ export default function Signup() {
 
     const handleSignup = async (event) => {
         event.preventDefault();
-
+        console.log(process.env.NEXT_PUBLIC_BASE_URL)
         const newUser = {
             name: event.target.name.value,
             email: event.target.email.value,
             password: event.target.password.value,
             confirmpassword: event.target.confirmpassword.value,
         }
+
         console.log(newUser)
-        const resp = fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/signup/api`, {
+        const resp = fetch('/signup/api', {
             method: 'POST',
             body: JSON.stringify(newUser),
             headers: {

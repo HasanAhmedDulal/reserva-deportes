@@ -3,10 +3,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { FaFacebook, FaLinkedin } from 'react-icons/fa6';
-import { FcGoogle } from "react-icons/fc";
 import { signIn } from "next-auth/react"
 import { useRouter } from 'next/navigation';
+import SocialSignin from '../SocialSignin/SocialSignin'
 
 
 export default function Login() {
@@ -17,11 +16,12 @@ export default function Login() {
 
         const email = event.target.email.value;
         const password = event.target.password.value;
-        const res = await signIn('credentials', {
-            email, password, redirect: false,
+        const resp = await signIn('credentials', {
+            email, password,
         })
-        console.log(res);
-        if (res.status === 200) {
+        console.log(resp);
+
+        if (resp.status === 200) {
             router.push('/')
         }
 
@@ -69,12 +69,7 @@ export default function Login() {
                         <hr className="flex-grow border-t" />
                     </div>
 
-                    <div className="lg:flex justify-center gap-2 space-y-2 lg:space-y-0">
-                        <Link href={''} className='flex justify-center items-center gap-2 border rounded-md px-5 py-1 border-secondary text-xl'> <FcGoogle />Google</Link>
-                        <Link href={''} className='flex justify-center items-center gap-2 border rounded-md px-5 py-1 border-secondary text-xl '> <FaLinkedin className='text-secondary' />LinkedIn</Link>
-                        <Link href={''} className='flex justify-center items-center gap-2 border rounded-md px-5 py-1 border-secondary text-xl '> <FaFacebook className='text-secondary' />Facebook</Link>
-
-                    </div>
+                    <SocialSignin></SocialSignin>
 
                     <div className="text-center mt-16">
                         <p className='text-2xl lg:text-4xl mb-5'>DOWNLOAD OUR APP</p>
