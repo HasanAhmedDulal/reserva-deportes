@@ -18,7 +18,7 @@ export default function Signup() {
             confirmpassword: event.target.confirmpassword.value,
         }
         console.log(newUser)
-        const resp = fetch('http://localhost:3000/signup/api', {
+        const resp = fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/signup/api`, {
             method: 'POST',
             body: JSON.stringify(newUser),
             headers: {

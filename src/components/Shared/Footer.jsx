@@ -15,7 +15,7 @@ export default function Footer() {
                                         src="/footer/mastercard.png"
                                         alt="Google Play"
                                         width={500}
-                                        height={500}
+                                        height={100}
                                     />
                                 </div>
 
@@ -24,7 +24,7 @@ export default function Footer() {
                                         src="/footer/visa.png"
                                         alt="Google Play"
                                         width={500}
-                                        height={500}
+                                        height={100}
 
                                     />
                                 </div>
