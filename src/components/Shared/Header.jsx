@@ -6,7 +6,7 @@ import React from 'react'
 
 export default function Header() {
     const session = useSession();
-    console.log(session);
+
     return (
         <div className='bg-black'>
             <div className="max-w-screen-2xl px-2 mx-auto text-white ">

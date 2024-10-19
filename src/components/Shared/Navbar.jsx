@@ -7,7 +7,7 @@ import { IoMdMenu } from "react-icons/io";
 export default function Navbar() {
 
     const session = useSession();
-    console.log(session);
+
 
 
 

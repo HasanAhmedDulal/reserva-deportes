@@ -6,18 +6,24 @@ import React from 'react'
 import { FaFacebook, FaLinkedin } from 'react-icons/fa6';
 import { FcGoogle } from "react-icons/fc";
 import { signIn } from "next-auth/react"
+import { useRouter } from 'next/navigation';
+
 
 export default function Login() {
+    const router = useRouter();
 
     const handleLogin = async (event) => {
         event.preventDefault();
 
         const email = event.target.email.value;
         const password = event.target.password.value;
-        const resp = await signIn('credentials', {
+        const res = await signIn('credentials', {
             email, password, redirect: false,
         })
-        console.log(resp);
+        console.log(res);
+        if (res.status === 200) {
+            router.push('/')
+        }
 
     };
     return (
