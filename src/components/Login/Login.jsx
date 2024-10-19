@@ -22,39 +22,23 @@ export default function Login() {
             email,
             password,
         });
+        console.log(result)
 
-        if (result?.error) {
-            setError(result.error);
-        } else {
-            // Navigate to home page after successful login
+        if (result?.status === 200) {
+
+            Swal.fire({
+                position: "center-top",
+                icon: "success",
+                title: "Login Succesfully",
+                showConfirmButton: true,
+                timer: 1500
+            });
             router.push('/');
+
         }
     };
 
 
-    // const handleLogin = async (event) => {
-    //     event.preventDefault();
-
-    //     const email = event.target.email.value;
-    //     const password = event.target.password.value;
-    //     const resp = await signIn('credentials', {
-    //         email, password, redirect: true,
-    //     })
-
-    //     if (resp.status === 200) {
-
-
-    //         Swal.fire({
-    //             position: "center-top",
-    //             icon: "success",
-    //             title: "Login Succesfully",
-    //             showConfirmButton: false,
-    //             timer: 1500
-    //         });
-    //         router.push('/')
-    //     }
-
-    // };
 
 
     return (

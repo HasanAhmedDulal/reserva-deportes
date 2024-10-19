@@ -10,10 +10,7 @@ export const middleware = async (request) => {
     // const token = await getToken({ req: request, secret: process.env.NEXTAUTH_SECRET });
 
 
-    // if (!token) {
-    //     return NextResponse.next();
 
-    // };
 
     if (!token) {
         return NextResponse.redirect(new URL('/login', request.url));
