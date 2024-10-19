@@ -10,7 +10,6 @@ export default function Signup() {
 
     const handleSignup = async (event) => {
         event.preventDefault();
-        console.log(process.env.NEXT_PUBLIC_BASE_URL)
         const newUser = {
             name: event.target.name.value,
             email: event.target.email.value,
