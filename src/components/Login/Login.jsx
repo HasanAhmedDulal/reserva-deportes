@@ -17,7 +17,7 @@ export default function Login() {
         const email = event.target.email.value;
         const password = event.target.password.value;
         const resp = await signIn('credentials', {
-            email, password,
+            email, password, redirect: false
         })
         console.log(resp);
 

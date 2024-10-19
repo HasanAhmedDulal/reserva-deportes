@@ -4,7 +4,7 @@ import type { NextRequest } from 'next/server'
 
 // This function can be marked `async` if using `await` inside
 export const middleware = async (request) => {
-    const token = cookies(request).get('next-auth.session-token');
+    const token = cookies().get('next-auth.session-token');
 
 
     // if (!token) {

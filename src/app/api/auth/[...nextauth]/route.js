@@ -7,7 +7,7 @@ import LinkedInProvider from "next-auth/providers/linkedin";
 
 
 const handler = NextAuth({
-    secret: 'a3b1cdef25f4329ac8ff2339e0b2d3ae1234fcb47e9a15bd1a9b6ac5f14d43a8=',
+    secret: process.env.NEXT_PUBLIC_AUTH_SECRET,
     session: {
         strategy: 'jwt',
         maxAge: 30 * 24 * 60 * 60,
@@ -29,7 +29,7 @@ const handler = NextAuth({
                     return null;
                 }
 
-                if (password !== currentUser.email) {
+                if (password !== currentUser.password) {
                     return null;
                 }
 
@@ -37,8 +37,8 @@ const handler = NextAuth({
             }
         }),
         GoogleProvider({
-            clientId: '317796042356-tls478h7iv5vhd5c251l4jj70utlkvaq.apps.googleusercontent.com',
-            clientSecret: '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',
+            clientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
+            clientSecret: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET,
         }),
         FacebookProvider({
             clientId: process.env.NEXT_PUBLIC_FACEBOOK_CLIENT_ID,
