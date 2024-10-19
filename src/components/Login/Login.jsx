@@ -1,6 +1,8 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
-
+import { FaFacebook, FaLinkedin } from 'react-icons/fa6';
+import { FcGoogle } from "react-icons/fc";
 export default function Login() {
     return (
 
@@ -8,10 +10,11 @@ export default function Login() {
             <div className="space-y-5 lg:space-y-0 flex-row-reverse lg:flex overflow-hidden gap-5 ">
                 {/* Left Section */}
                 <div className="lg:w-[500px] p-8  border border-secondary rounded-[20px] ">
-                    <h2 className="text-2xl lg:text-4xl font-bold text-center text-blue-600 mb-16 ">LOGIN NOW</h2>
+                    <h2 className="text-2xl lg:text-4xl font-bold text-center text-blue-600 mb-14 ">LOGIN NOW</h2>
 
                     <form className="space-y-10">
                         <div>
+                            <p className='mb-2'>Email</p>
                             <input
                                 type="email"
                                 placeholder="Email address"
@@ -19,13 +22,14 @@ export default function Login() {
                             />
                         </div>
                         <div>
+                            <p className='mb-2'>Password</p>
                             <input
                                 type="password"
                                 placeholder="Password"
                                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                             />
                         </div>
-                        <button className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
+                        <button className="btn w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
                             LOGIN NOW
                         </button>
                     </form >
@@ -41,15 +45,16 @@ export default function Login() {
                         <hr className="flex-grow border-t" />
                     </div>
 
-                    <div className="flex justify-around">
-                        <button className="bg-gray-100 p-2 rounded-md">Google</button>
-                        <button className="bg-gray-100 p-2 rounded-md">LinkedIn</button>
-                        <button className="bg-gray-100 p-2 rounded-md">Facebook</button>
+                    <div className="lg:flex justify-center gap-2 space-y-2 lg:space-y-0">
+                        <Link href={''} className='flex justify-center items-center gap-2 border rounded-md px-5 py-1 border-secondary text-xl'> <FcGoogle />Google</Link>
+                        <Link href={''} className='flex justify-center items-center gap-2 border rounded-md px-5 py-1 border-secondary text-xl '> <FaLinkedin className='text-secondary' />LinkedIn</Link>
+                        <Link href={''} className='flex justify-center items-center gap-2 border rounded-md px-5 py-1 border-secondary text-xl '> <FaFacebook className='text-secondary' />Facebook</Link>
+
                     </div>
 
                     <div className="text-center mt-16">
                         <p className='text-2xl lg:text-4xl mb-5'>DOWNLOAD OUR APP</p>
-                        <div className="flex justify-center items-center">
+                        <div className="flex justify-center items-center  ">
 
                             <Image
                                 src="/qrcode/qrcode.png"
@@ -59,13 +64,13 @@ export default function Login() {
 
                             />
 
-                            <div className='space-y-1'>
+                            <div className='space-y-5 '>
                                 <Image
                                     src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                                     alt="Google Play"
 
                                     width={180}
-                                    height={50}
+                                    height={250}
 
                                 />
                                 <Image
@@ -76,12 +81,6 @@ export default function Login() {
                                     height={50}
 
                                 />
-                                <div className="w-[150px]">
-
-                                </div>
-                                <div className="w-[150px]">
-
-                                </div>
                             </div>
 
                         </div>

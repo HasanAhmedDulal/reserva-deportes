@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-
-
+import { IoMdMenu } from "react-icons/io";
 
 export default function Navbar() {
     const menuItems = [
@@ -17,23 +16,12 @@ export default function Navbar() {
                 <div className="navbar px-0">
                     <div className="navbar-start">
                         <div className="dropdown">
-                            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-5 w-5"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M4 6h16M4 12h8m-8 6h16" />
-                                </svg>
+                            <div tabIndex={0} role="button" className="lg:hidden">
+                                <IoMdMenu className="h-14 w-14 " />
                             </div>
                             <ul
                                 tabIndex={0}
-                                className="menu menu-sm dropdown-content bg-primary rounded-box z-[1] mt-3 w-52 p-5 shadow gap-5 items-center">
+                                className="menu menu-sm dropdown-content bg-primary rounded-box z-[1] mt-3 w-fit p-5 shadow gap-5 items-center text-white">
                                 {menuItems.map((item, index) => <Link href={item.path} key={index}>{item.name}</Link>
                                 )}
                             </ul>
