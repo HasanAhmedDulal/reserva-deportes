@@ -6,9 +6,9 @@ export default function Banner() {
     return (
 
         <div
-            className="hero h-96 lg:h-[600px]"
+            className="hero h-72 lg:h-[460px]"
             style={{
-                backgroundImage: "url(/banner/banner.png)",
+                backgroundImage: "url(/banner/banner.jpg)",
             }}>
 
             <div className="min-w-screen-2xl px-2 mx-auto text-white ">

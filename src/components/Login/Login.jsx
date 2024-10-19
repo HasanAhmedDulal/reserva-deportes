@@ -10,7 +10,7 @@ import Swal from 'sweetalert2'
 export default function Login() {
     const router = useRouter();
     const session = useSession();
-
+    console.log(session)
 
 
     const handleLogin = async (event) => {
@@ -18,11 +18,12 @@ export default function Login() {
         const email = event.target.email.value;
         const password = event.target.password.value;
         const result = await signIn('credentials', {
-            redirect: false,
+
             email,
             password,
+            redirect: true,
+            callbackUrl: '/',
         });
-        console.log(result)
 
         if (result?.status === 200) {
 

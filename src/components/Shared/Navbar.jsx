@@ -7,21 +7,21 @@ import { IoMdMenu } from "react-icons/io";
 export default function Navbar() {
 
     const session = useSession();
-
+    console.log(session)
 
 
 
     const menuItems = [
         { name: 'Home', path: '/' },
         { name: 'Join party', path: '/' },
-        { name: 'Courses', path: '/courses' },
+        { name: 'Courses', path: '/' },
         { name: 'Tournament', path: '/' },
         { name: 'Reginstration for Custural event', path: '/' },
 
     ]
 
     return (
-        <div className='bg-base-100'>
+        <div className='bg-white'>
             <div className="max-w-screen-2xl px-2 mx-auto text-black">
                 <div className="navbar px-0">
                     <div className="navbar-start">

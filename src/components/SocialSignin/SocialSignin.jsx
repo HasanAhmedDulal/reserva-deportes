@@ -13,7 +13,7 @@ export default function SocialSignin() {
     const handleSocialLogin = async (provider) => {
         const resp = await signIn(provider, { redirect: false });
         if (session.status === 'authenticated') {
-            router.push('/signup')
+            router.push('/course')
         }
 
     }

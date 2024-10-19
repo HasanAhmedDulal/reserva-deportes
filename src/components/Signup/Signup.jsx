@@ -1,13 +1,15 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation';
 import React from 'react'
 import { FaFacebook, FaLinkedin } from 'react-icons/fa6';
 import { FcGoogle } from "react-icons/fc";
+import Swal from 'sweetalert2';
 
 
 export default function Signup() {
-
+    const router = useRouter();
     const handleSignup = async (event) => {
         event.preventDefault();
         const newUser = {
@@ -17,7 +19,7 @@ export default function Signup() {
             confirmpassword: event.target.confirmpassword.value,
         }
 
-        console.log(newUser)
+        console.log(process.env.NEXT_PUBLIC_BASE_URL)
         const resp = fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/signup/api`, {
             method: 'POST',
             body: JSON.stringify(newUser),
@@ -25,9 +27,17 @@ export default function Signup() {
                 'content-type': 'application/json'
             }
         })
-        console.log(resp)
+
         if (resp) {
             event.target.reset();
+            Swal.fire({
+                position: "center-top",
+                icon: "success",
+                title: "Signup Succesfully",
+                showConfirmButton: true,
+                timer: 1500
+            });
+            router.push('/');
         }
     }
     return (
