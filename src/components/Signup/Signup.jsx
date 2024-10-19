@@ -1,34 +1,53 @@
 'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { FaFacebook, FaLinkedin } from 'react-icons/fa6';
 import { FcGoogle } from "react-icons/fc";
-import { signIn } from "next-auth/react"
 
-export default function Login() {
 
-    const handleLogin = async (event) => {
+export default function Signup() {
+
+    const handleSignup = async (event) => {
         event.preventDefault();
 
-        const email = event.target.email.value;
-        const password = event.target.password.value;
-        const resp = await signIn('credentials', {
-            email, password, redirect: false,
+        const newUser = {
+            name: event.target.name.value,
+            email: event.target.email.value,
+            password: event.target.password.value,
+            confirmpassword: event.target.confirmpassword.value,
+        }
+        console.log(newUser)
+        const resp = fetch('http://localhost:3000/signup/api', {
+            method: 'POST',
+            body: JSON.stringify(newUser),
+            headers: {
+                'content-type': 'application/json'
+            }
         })
-        console.log(resp);
-
-    };
+        console.log(resp)
+        if (resp) {
+            event.target.reset();
+        }
+    }
     return (
 
         <div className="flex items-center justify-center  py-16">
             <div className="space-y-5 lg:space-y-0 flex-row-reverse lg:flex overflow-hidden gap-5 ">
                 {/* Left Section */}
                 <div className="lg:w-[500px] p-8  border border-secondary rounded-[20px] ">
-                    <h2 className="text-2xl lg:text-4xl font-bold text-center text-blue-600 mb-10 ">LOGIN NOW</h2>
+                    <h2 className="text-2xl lg:text-4xl font-bold text-center text-blue-600 mb-10 uppercase">Signup NOW</h2>
 
-                    <form className="space-y-10" onSubmit={handleLogin}>
+                    <form className="space-y-10" onSubmit={handleSignup}>
+                        <div>
+                            <p className='mb-2'>Name</p>
+                            <input
+                                name='name'
+                                type="text"
+                                placeholder="Type Name"
+                                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                            />
+                        </div>
                         <div>
                             <p className='mb-2'>Email</p>
                             <input
@@ -47,8 +66,17 @@ export default function Login() {
                                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                             />
                         </div>
-                        <button type='submit' className="btn w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
-                            LOGIN NOW
+                        <div>
+                            <p className='mb-2'>Confirm Password</p>
+                            <input
+                                name='confirmpassword'
+                                type="confirmpassword"
+                                placeholder="Confirm Password"
+                                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                            />
+                        </div>
+                        <button type='submit' className="btn w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 uppercase">
+                            Signup NOW
                         </button>
                     </form >
 
