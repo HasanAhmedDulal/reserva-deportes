@@ -1,18 +1,24 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { FaFacebook, FaLinkedin } from 'react-icons/fa6';
 import { FcGoogle } from "react-icons/fc";
 export default function Login() {
+
+    const handleLogin = async () => {
+        event.preventDefault();
+        console.log('lgin')
+    }
     return (
 
         <div className="flex items-center justify-center  py-16">
             <div className="space-y-5 lg:space-y-0 flex-row-reverse lg:flex overflow-hidden gap-5 ">
                 {/* Left Section */}
                 <div className="lg:w-[500px] p-8  border border-secondary rounded-[20px] ">
-                    <h2 className="text-2xl lg:text-4xl font-bold text-center text-blue-600 mb-14 ">LOGIN NOW</h2>
+                    <h2 className="text-2xl lg:text-4xl font-bold text-center text-blue-600 mb-10 ">LOGIN NOW</h2>
 
-                    <form className="space-y-10">
+                    <form className="space-y-10" onSubmit={handleLogin}>
                         <div>
                             <p className='mb-2'>Email</p>
                             <input
@@ -29,7 +35,7 @@ export default function Login() {
                                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                             />
                         </div>
-                        <button className="btn w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
+                        <button type='submit' className="btn w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
                             LOGIN NOW
                         </button>
                     </form >

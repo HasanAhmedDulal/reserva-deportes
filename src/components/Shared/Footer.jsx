@@ -45,11 +45,11 @@ export default function Footer() {
                     </div>
                     <div className='w-full lg:w-1/2 flex lg:justify-end justify-center mt-10 lg:mt-0'>
                         <div className=''>
-                            <div className='w-48  bg-white rounded-full'>
+                            <div className='w-52'>
                                 <Image
                                     src="/logo/logo.png"
                                     alt="logo"
-                                    className='mb-5 p-7'
+                                    className='mb-5'
                                     width={250}
                                     height={150}
 
