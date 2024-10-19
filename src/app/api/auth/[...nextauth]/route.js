@@ -7,7 +7,7 @@ import LinkedInProvider from "next-auth/providers/linkedin";
 
 
 const handler = NextAuth({
-    secret: process.env.NEXT_PUBLIC_AUTH_SECRET,
+    secret: process.env.NEXT_PUBLIC_NEXTAUTH_SECRET,
     session: {
         strategy: 'jwt',
         maxAge: 30 * 24 * 60 * 60,

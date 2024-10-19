@@ -1,31 +1,62 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
-import { signIn } from "next-auth/react"
+import { signIn, useSession } from "next-auth/react"
 import { useRouter } from 'next/navigation';
 import SocialSignin from '../SocialSignin/SocialSignin'
+import Swal from 'sweetalert2'
 
 
 export default function Login() {
     const router = useRouter();
+    const session = useSession();
+
+
 
     const handleLogin = async (event) => {
         event.preventDefault();
-
         const email = event.target.email.value;
         const password = event.target.password.value;
-        const resp = await signIn('credentials', {
-            email, password, redirect: false
-        })
-        console.log(resp);
+        const result = await signIn('credentials', {
+            redirect: false,
+            email,
+            password,
+        });
 
-        if (resp.status === 200) {
-            router.push('/')
+        if (result?.error) {
+            setError(result.error);
+        } else {
+            // Navigate to home page after successful login
+            router.push('/');
         }
-
     };
+
+
+    // const handleLogin = async (event) => {
+    //     event.preventDefault();
+
+    //     const email = event.target.email.value;
+    //     const password = event.target.password.value;
+    //     const resp = await signIn('credentials', {
+    //         email, password, redirect: true,
+    //     })
+
+    //     if (resp.status === 200) {
+
+
+    //         Swal.fire({
+    //             position: "center-top",
+    //             icon: "success",
+    //             title: "Login Succesfully",
+    //             showConfirmButton: false,
+    //             timer: 1500
+    //         });
+    //         router.push('/')
+    //     }
+
+    // };
+
+
     return (
 
         <div className="flex items-center justify-center  py-16">

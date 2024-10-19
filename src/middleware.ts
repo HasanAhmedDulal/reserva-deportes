@@ -1,10 +1,13 @@
+
 import { cookies } from 'next/headers'
 import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+
 
 // This function can be marked `async` if using `await` inside
 export const middleware = async (request) => {
-    const token = cookies().get('__Secure-next-auth.session-token');
+    // __Secure-
+    const token = cookies(request).get('__Secure-next-auth.session-token');
+    // const token = await getToken({ req: request, secret: process.env.NEXTAUTH_SECRET });
 
 
     // if (!token) {
