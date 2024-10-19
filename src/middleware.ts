@@ -7,7 +7,7 @@ import { NextResponse } from 'next/server'
 export const middleware = async (request) => {
     // __Secure-
     const token = cookies(request).get('__Secure-next-auth.session-token');
-    // const token = await getToken({ req: request, secret: process.env.NEXTAUTH_SECRET });
+
 
 
 
@@ -23,5 +23,5 @@ export const middleware = async (request) => {
 
 // See "Matching Paths" below to learn more
 export const config = {
-    matcher: ['/'],
+    matcher: ['/courses'],
 };

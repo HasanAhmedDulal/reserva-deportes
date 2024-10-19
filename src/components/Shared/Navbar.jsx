@@ -14,7 +14,7 @@ export default function Navbar() {
     const menuItems = [
         { name: 'Home', path: '/' },
         { name: 'Join party', path: '/' },
-        { name: 'Courses', path: '/' },
+        { name: 'Courses', path: '/courses' },
         { name: 'Tournament', path: '/' },
         { name: 'Reginstration for Custural event', path: '/' },
 
