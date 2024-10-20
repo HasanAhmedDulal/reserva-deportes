@@ -44,10 +44,10 @@ export default function Signup() {
     return (
 
         <div className="flex items-center justify-center  py-16">
-            <div className="space-y-5 lg:space-y-0 flex-row-reverse lg:flex overflow-hidden gap-5 ">
+            <div className="space-y-5 lg:space-y-0 flex-row-reverse lg:flex gap-5 ">
                 {/* Left Section */}
-                <div className="lg:w-[500px] p-8  border border-secondary rounded-[20px] ">
-                    <h2 className="text-2xl lg:text-4xl font-bold text-center text-blue-600 mb-10 uppercase">Signup NOW</h2>
+                <div className="lg:w-[500px] p-5  border border-secondary rounded-[20px] ">
+                    <h2 className="text-2xl lg:text-4xl font-bold text-center text-blue-600 mb-5 uppercase">Signup NOW</h2>
 
                     <form className="space-y-10" onSubmit={handleSignup}>
                         <div>

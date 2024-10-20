@@ -24,13 +24,15 @@ export default function Login() {
             callbackUrl: '/',
         });
 
-        Swal.fire({
-            position: "top-center",
-            icon: "success",
-            title: "Login Successfuly",
-            showConfirmButton: false,
-            timer: 1500
-        });
+        if (result) {
+            Swal.fire({
+                position: "top-center",
+                icon: "success",
+                title: "Login Successfuly",
+                showConfirmButton: false,
+                timer: 1500
+            });
+        }
 
 
 
@@ -41,13 +43,13 @@ export default function Login() {
 
     return (
 
-        <div className="flex items-center justify-center  py-16">
-            <div className="space-y-5 lg:space-y-0 flex-row-reverse lg:flex overflow-hidden gap-5 ">
+        <div className="flex items-center justify-center  py-16 ">
+            <div className="space-y-5 lg:space-y-0 flex-row-reverse lg:flex  gap-5 ">
                 {/* Left Section */}
-                <div className="lg:w-[500px] p-8  border border-secondary rounded-[20px] ">
-                    <h2 className="text-2xl lg:text-4xl font-bold text-center text-blue-600 mb-10 ">LOGIN NOW</h2>
+                <div className="lg:w-[450px] p-5  border border-secondary rounded-[20px] ">
+                    <h2 className="text-2xl lg:text-4xl font-bold text-center text-blue-600 mb-5 ">LOGIN NOW</h2>
 
-                    <form className="space-y-10" onSubmit={handleLogin}>
+                    <form className="space-y-5" onSubmit={handleLogin}>
                         <div>
                             <p className='mb-2'>Email</p>
                             <input
@@ -84,7 +86,7 @@ export default function Login() {
 
                     <SocialSignin></SocialSignin>
 
-                    <div className="text-center mt-16">
+                    <div className="text-center mt-10 ">
                         <p className='text-2xl lg:text-4xl mb-5'>DOWNLOAD OUR APP</p>
                         <div className="flex justify-center items-center  ">
 
@@ -120,7 +122,7 @@ export default function Login() {
                 </div>
 
                 {/* Right Section */}
-                <div className="lg:w-[500px] p-8  border border-secondary rounded-[20px]">
+                <div className="lg:w-[450px] p-5  border border-secondary rounded-[20px]">
                     <h2 className="text-4xl font-bold mb-6">Description</h2>
 
                     <ul className="space-y-4 text-xl">
