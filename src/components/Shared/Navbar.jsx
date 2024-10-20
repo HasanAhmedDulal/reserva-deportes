@@ -46,18 +46,12 @@ export default function Navbar() {
 
                     </div>
                     <div className="navbar-end ">
-                        {!session.data ?
+                        {session.data &&
                             <  >
-                                <Link href={'/login'}>
-                                    <button className="btn btn-primary h-6 w-28 text-white">
-                                        Signin
-                                    </button>
-                                </Link>
+                                <button onClick={() => signOut()} className="btn btn-primary h-6 w-28 text-white">Sign Out</button>
                             </>
-                            :
-                            <button onClick={() => signOut()} className="btn btn-primary h-6 w-28 text-white">Sign Out</button>
-                        }
 
+                        }
 
                     </div>
                 </div>
