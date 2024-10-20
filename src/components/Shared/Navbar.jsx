@@ -47,7 +47,7 @@ export default function Navbar() {
                                 )}
                             </ul>
                         </div>
-                        <Link href={'/'}> <Image src='/logo/logo.png' alt="logo" width={60} height={60} /></Link>
+                        <Link href={'/'}> <Image src='/logo/logo.png' alt="logo" width={70} height={70} /></Link>
                     </div>
                     <div className="navbar-center hidden lg:flex  justify-center space-x-10 text-md ">
                         {menuItems.map((item, index) => <Link href={item.path} key={index} className='hover:bg-primary px-4 py-2 rounded'>{item.name}</Link>

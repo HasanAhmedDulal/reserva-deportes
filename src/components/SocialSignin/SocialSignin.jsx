@@ -9,22 +9,26 @@ export default function SocialSignin() {
 
     const router = useRouter();
     const session = useSession();
-
+    console.log(session, 'session')
     const handleSocialLogin = async (provider) => {
         const resp = await signIn(provider, { redirect: false });
-        if (session.status === 'authenticated') {
-            router.push('/course')
-        }
+        Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: `${provider} Login Successfuly`,
+            showConfirmButton: false,
+            timer: 1500
+        });
 
     }
 
 
     return (
-        <div className="lg:flex justify-center gap-2 space-y-2 lg:space-y-0">
-            <button onClick={() => handleSocialLogin('google')} className='flex justify-center items-center gap-2 border rounded-md px-5 py-1 border-secondary text-xl'> <FcGoogle />Google
+        <div className="md:flex justify-center space-y-2 gap-2 md:space-y-0">
+            <button onClick={() => handleSocialLogin('google')} className='flex justify-center items-center gap-2 border rounded-md px-5 py-1 border-secondary text-xl w-full '> <FcGoogle />Google
             </button>
-            <button onClick={() => handleSocialLogin('linkedin')} className='flex justify-center items-center gap-2 border rounded-md px-5 py-1 border-secondary text-xl '> <FaLinkedin className='text-secondary' />LinkedIn</button>
-            <button onClick={() => handleSocialLogin('facebook')} className='flex justify-center items-center gap-2 border rounded-md px-5 py-1 border-secondary text-xl '> <FaFacebook className='text-secondary' />Facebook</button>
+            <button onClick={() => handleSocialLogin('linkedin')} className='flex justify-center items-center gap-2 border rounded-md px-5 py-1 border-secondary text-xl w-full '> <FaLinkedin className='text-secondary' />LinkedIn</button>
+            <button onClick={() => handleSocialLogin('facebook')} className='flex justify-center items-center gap-2 border rounded-md px-5 py-1 border-secondary text-xl w-full '> <FaFacebook className='text-secondary' />Facebook</button>
 
         </div>
     )
