@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { signIn } from "next-auth/react"
+import { signIn, useSession } from "next-auth/react"
 import SocialSignin from '../SocialSignin/SocialSignin'
 import Swal from 'sweetalert2'
 import { IoMdArrowDropright } from 'react-icons/io';
@@ -9,6 +9,8 @@ import Link from 'next/link';
 
 
 export default function Login() {
+    const session = useSession();
+    console.log(session)
 
     const handleLogin = async (event) => {
         event.preventDefault();
@@ -21,7 +23,8 @@ export default function Login() {
             callbackUrl: '/',
         });
 
-        if (result) {
+
+        if (session) {
             Swal.fire({
                 position: "top-center",
                 icon: "success",
