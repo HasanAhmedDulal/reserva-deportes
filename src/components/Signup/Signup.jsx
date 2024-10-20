@@ -20,7 +20,7 @@ export default function Signup() {
             confirmpassword: event.target.confirmpassword.value,
         }
 
-        console.log(process.env.NEXT_PUBLIC_BASE_URL)
+
         const resp = fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/signup/api`, {
             method: 'POST',
             body: JSON.stringify(newUser),

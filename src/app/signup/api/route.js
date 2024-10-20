@@ -10,7 +10,7 @@ export const POST = async (request) => {
         const exist = await userCollection.findOne({ email: newUser.email })
         if (exist) {
             return NextResponse.json({ message: 'user exist' }, { status: '304' })
-            console.log('alreday create')
+
         }
         const res = await userCollection.insertOne(newUser);
         return NextResponse.json({ message: 'user created' }, { status: '200' })

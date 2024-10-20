@@ -1,15 +1,11 @@
-'use client'
-import { signIn, useSession } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
-import React, { useState } from 'react'
+
+import { signIn } from 'next-auth/react';
+import React from 'react'
 import { FaFacebook, FaLinkedin } from 'react-icons/fa6';
 import { FcGoogle } from "react-icons/fc";
 
 export default function SocialSignin() {
 
-    const router = useRouter();
-    const session = useSession();
-    console.log(session, 'session')
     const handleSocialLogin = async (provider) => {
         const resp = await signIn(provider, { redirect: false });
         Swal.fire({
@@ -21,7 +17,6 @@ export default function SocialSignin() {
         });
 
     }
-
 
     return (
         <div className="md:flex justify-center space-y-2 gap-2 md:space-y-0">
