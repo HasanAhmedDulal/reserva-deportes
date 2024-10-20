@@ -4,6 +4,7 @@ import Navbar from "@/components/Shared/Navbar";
 import Header from "@/components/Shared/Header";
 import Footer from "@/components/Shared/Footer";
 import AuthProvider from "@/auth/AuthProvider";
+import Banner from "@/components/Home/Banner";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,7 +32,7 @@ export default function RootLayout({ children }) {
         <AuthProvider>
           <Header></Header>
           <Navbar></Navbar>
-
+          <Banner></Banner>
           <main className="max-w-screen-2xl px-2 mx-auto bg-white">{children}</main>
           <Footer></Footer>
         </AuthProvider>

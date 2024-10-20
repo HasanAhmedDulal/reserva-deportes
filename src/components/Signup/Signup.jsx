@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import React from 'react'
 import { FaFacebook, FaLinkedin } from 'react-icons/fa6';
 import { FcGoogle } from "react-icons/fc";
+import { IoMdArrowDropright } from 'react-icons/io';
 import Swal from 'sweetalert2';
 
 
@@ -92,7 +93,7 @@ export default function Signup() {
 
                     <div className="flex justify-between items-center mt-4 text-sm">
                         <a href="#" className="text-blue-500 hover:underline">Forgot Password?</a>
-                        <a href="#" className="text-blue-500 hover:underline">Dont have an account? Sign Up</a>
+                        <Link href="/login" className="text-blue-500 hover:underline">Already have an account? Sign in</Link>
                     </div>
 
                     <div className="flex items-center my-6">
@@ -148,24 +149,24 @@ export default function Signup() {
                     <h2 className="text-4xl font-bold mb-6">Description</h2>
 
                     <ul className="space-y-4 text-xl">
-                        <li className="flex items-start">
-                            <span className="mr-2 text-blue-500">▶</span>
+                        <li className="flex items-start ">
+                            <span className="mr-2 text-blue-500"><IoMdArrowDropright className='text-4xl' /></span>
                             Create an account on ReservaDeportes by clicking here.
                         </li>
                         <li className="flex items-start">
-                            <span className="mr-2 text-blue-500">▶</span>
+                            <span className="mr-2 text-blue-500"><IoMdArrowDropright className='text-4xl' /></span>
                             Check your email to activate your account (check spam/junk if not found).
                         </li>
                         <li className="flex items-start">
-                            <span className="mr-2 text-blue-500">▶</span>
+                            <span className="mr-2 text-blue-500"><IoMdArrowDropright className='text-4xl' /></span>
                             Identify yourself with your data.
                         </li>
                         <li className="flex items-start">
-                            <span className="mr-2 text-blue-500">▶</span>
+                            <span className="mr-2 text-blue-500"><IoMdArrowDropright className='text-4xl' /></span>
                             [FOR MEMBERS] Clubs need to validate your data before accepting you.
                         </li>
                         <li className="flex items-start">
-                            <span className="mr-2 text-blue-500">▶</span>
+                            <span className="mr-2 text-blue-500"><IoMdArrowDropright className='text-4xl' /></span>
                             Youll receive an email once accepted to book your court online.
                         </li>
                     </ul>

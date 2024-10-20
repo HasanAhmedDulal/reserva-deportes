@@ -4,22 +4,21 @@ import { NextRequest, NextResponse } from 'next/server'
 
 
 // This function can be marked `async` if using `await` inside
-export const middleware = async (request: NextRequest) => {
+export const middleware = (request) => {
 
     const path = request.nextUrl.pathname;
     const publicPath = path === '/login' || path === '/signup'
-    // const token = request.cookies.get('token')?.value || '';
-    // __Secure-
-    const token = cookies(request).get('__Secure-next-auth.session-token');
-    console.log(token?.value)
+    //                  __Secure-
+    const token = cookies(request).get(' __Secure-next-auth.session-token');
+
 
     if (publicPath && token?.value) {
         return NextResponse.redirect(new URL('/', request.url));
+
     }
     if (!publicPath && !token?.value) {
         return NextResponse.redirect(new URL('/login', request.url));
     }
-
 
     // return NextResponse.next();
 

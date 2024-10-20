@@ -45,7 +45,7 @@ export default function Footer() {
                     </div>
                     <div className='w-full lg:w-1/2 flex lg:justify-end justify-center mt-10 lg:mt-0'>
                         <div className=''>
-                            <div className='w-40  bg-white rounded-full'>
+                            <div className='w-40  bg-white mx-auto md:mx-0 rounded-full'>
                                 <Image
                                     src="/logo/logo.png"
                                     alt="logo"
@@ -82,7 +82,7 @@ export default function Footer() {
             </div>
 
 
-            <div className=' footer-center  p-16 text-xl'>
+            <div className=' footer-center  p-16 text-2xl'>
                 <p>Copyright © {new Date().getFullYear()} powered by ReservaDeportes ® Reservadeportes Demo | info@reservadeportes.com</p>
             </div>
         </div>
