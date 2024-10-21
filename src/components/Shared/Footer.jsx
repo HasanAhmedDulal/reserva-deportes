@@ -5,7 +5,7 @@ import { FaFacebook, FaLinkedin, FaSquareInstagram, FaSquareXTwitter, } from "re
 export default function Footer() {
     return (
         <div className='bg-[#202124] text-white pt-5'>
-            <div className="container  mx-auto md:px-20 lg:px-24">
+            <div className="container  mx-auto md:px-10 px-14 lg:px-24 ">
                 <div className="grid md:grid-cols-1 lg:grid-cols-3   ">
                     <div className=' flex justify-start '>
                         <div >
