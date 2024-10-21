@@ -19,10 +19,9 @@ export default function Login() {
         const result = await signIn('credentials', {
             email,
             password,
-            redirect: false,
+            redirect: true,
             callbackUrl: '/',
         });
-
 
         if (session) {
             Swal.fire({
