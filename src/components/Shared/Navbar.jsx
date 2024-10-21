@@ -33,7 +33,7 @@ export default function Navbar() {
 
     return (
         <div className='bg-white'>
-            <div className="container px-2 mx-auto text-black">
+            <div className="container px-3 mx-auto text-black">
                 <div className="navbar px-0 ">
                     <div className="navbar-start relative">
                         <div className="dropdown">

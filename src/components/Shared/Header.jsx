@@ -5,7 +5,7 @@ export default function Header() {
 
     return (
         <div className='bg-black'>
-            <div className="container px-2 mx-auto text-white ">
+            <div className="container px-3 mx-auto text-white ">
                 <div className="grid grid-cols-1 lg:flex justify-between items-center lg:h-20 gap-5 lg:gap-10 py-5 ">
 
                     <input

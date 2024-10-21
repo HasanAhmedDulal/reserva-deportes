@@ -4,8 +4,8 @@ import React from 'react'
 import { FaFacebook, FaLinkedin, FaSquareInstagram, FaSquareXTwitter, } from "react-icons/fa6";
 export default function Footer() {
     return (
-        <div className='bg-[#202124] text-white text-xl'>
-            <div className="max-w-screen-2xl px-2 mx-auto ">
+        <div className='bg-[#202124] text-white '>
+            <div className="max-w-screen-2xl px-3 mx-auto text-xl">
                 <div className="w-full lg:flex justify-center  text-white py-10">
                     <div className='w-full lg:w-1/2 flex justify-start'>
                         <div >
@@ -82,8 +82,8 @@ export default function Footer() {
             </div>
 
             <div className="divider bg-white h-[2px]"></div>
-            <div className=' footer-center pb-3 '>
-                <p>Copyright © {new Date().getFullYear()} powered by ReservaDeportes ® Reservadeportes Demo | info@reservadeportes.com</p>
+            <div className=' footer-center pb-10'>
+                <p>Copyright © {new Date().getFullYear()} powered by ReservaDeportes ® | Reservadeportes Demo | info@reservadeportes.com</p>
             </div>
         </div>
     )
