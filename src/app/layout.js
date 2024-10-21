@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-no-repeat bg-cover bg-center bg-fixed relative`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-no-repeat bg-cover bg-center bg-fixed  `}
         style={{
           backgroundImage: "url(/banner/banner.jpg)",
         }}
@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
           {/* <Header></Header> */}
           <Navbar></Navbar>
           {/* <Banner></Banner> */}
-          <main className="container px-2 mx-auto  mt-40">{children}</main>
+          <main className="container px-2 mx-auto mt-[155px]">{children}</main>
           <Footer></Footer>
         </AuthProvider>
       </body>

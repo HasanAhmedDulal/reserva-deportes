@@ -33,7 +33,7 @@ export default function Navbar() {
     ]
 
     return (
-        <div className='bg-white fixed top-0 left-0 right-0 bg-opacity-80'>
+        <div className='bg-white fixed top-0 left-0 right-0 '>
 
             <Header></Header>
             <div className="container px-5 mx-auto text-black ">
@@ -53,7 +53,7 @@ export default function Navbar() {
                         <Link href={'/'}> <Image src='/logo/logo.png' alt="logo" width={60} height={60} /></Link>
                     </div>
                     <div className="navbar-center hidden lg:flex  justify-center space-x-10 text-xl font-bold">
-                        {menuItems.map((item, index) => <Link href={item.path} key={index} className='hover:bg-primary px-4 py-2 rounded'>{item.name}</Link>
+                        {menuItems.map((item, index) => <Link href={item.path} key={index} className='hover:bg-primary px-4 py-2 rounded  duration-[0.5s]  hover:text-white'>{item.name}</Link>
                         )}
 
                     </div>
