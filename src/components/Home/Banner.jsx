@@ -12,7 +12,7 @@ export default function Banner() {
                 backgroundImage: "url(/banner/banner.jpg)",
             }}>
 
-            <div className="min-w-screen-2xl px-2 mx-auto text-white">
+            <div className="container px-2 mx-auto text-white">
                 <h1 className="mb-5 font-bold text-5xl lg:text-8xl
                  text-white tracking-wide text-shadow-[2px 2px black]
                 ">
