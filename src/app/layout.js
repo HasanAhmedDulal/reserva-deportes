@@ -27,13 +27,17 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-no-repeat bg-cover`}
+        style={{
+          backgroundImage: "url(/banner/banner.jpg)",
+        }}
       >
+
         <AuthProvider>
           <Header></Header>
           <Navbar></Navbar>
           {/* <Banner></Banner> */}
-          <main className="container px-2 mx-auto bg-white">{children}</main>
+          <main className="container px-2 mx-auto  ">{children}</main>
           <Footer></Footer>
         </AuthProvider>
       </body>

@@ -38,15 +38,15 @@ export default function Login() {
     };
 
 
-
+    // style={{
+    //     backgroundImage: "url(/banner/banner.jpg)",
+    // }}
 
     return (
 
         <div
             className="hero "
-            style={{
-                backgroundImage: "url(/banner/banner.jpg)",
-            }}>
+        >
 
             <div className="container px-2 mx-auto text-white ">
                 <div className="flex items-center justify-center  p-10 ">
