@@ -7,6 +7,7 @@ import { FaFacebook, FaLinkedin } from 'react-icons/fa6';
 import { FcGoogle } from "react-icons/fc";
 import { IoMdArrowDropright } from 'react-icons/io';
 import Swal from 'sweetalert2';
+import SocialSignin from '../SocialSignin/SocialSignin';
 
 
 export default function Signup() {
@@ -43,19 +44,19 @@ export default function Signup() {
     }
     return (
 
-        <div className="flex items-center justify-center  py-16">
-            <div className="space-y-5 lg:space-y-0 flex-row-reverse lg:flex gap-5 ">
+        <div className="flex items-center justify-center  py-14 ">
+            <div className="space-y-5 lg:space-y-0 flex-row-reverse lg:flex  gap-5 ">
                 {/* Left Section */}
-                <div className="lg:w-[500px] p-5  border border-secondary rounded-[20px] ">
-                    <h2 className="text-2xl lg:text-4xl font-bold text-center text-blue-600 mb-5 uppercase">Signup NOW</h2>
+                <div className="lg:w-[400px] p-5  border border-secondary rounded-[20px] ">
+                    <h2 className="text-2xl lg:text-3xl font-bold text-center text-blue-600 mb-2 uppercase">Signup NOW</h2>
 
-                    <form className="space-y-10" onSubmit={handleSignup}>
+                    <form className="space-y-3" onSubmit={handleSignup}>
                         <div>
                             <p className='mb-2'>Name</p>
                             <input
                                 name='name'
-                                type="text"
-                                placeholder="Type Name"
+                                type="email"
+                                placeholder="Type your name"
                                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                             />
                         </div>
@@ -64,7 +65,7 @@ export default function Signup() {
                             <input
                                 name='email'
                                 type="email"
-                                placeholder="Email address"
+                                placeholder="Type your Email"
                                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                             />
                         </div>
@@ -78,22 +79,22 @@ export default function Signup() {
                             />
                         </div>
                         <div>
-                            <p className='mb-2'>Confirm Password</p>
+                            <p className='mb-2'>Confirm password</p>
                             <input
                                 name='confirmpassword'
-                                type="confirmpassword"
-                                placeholder="Confirm Password"
+                                type="password"
+                                placeholder="confirmpassword"
                                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                             />
                         </div>
-                        <button type='submit' className="btn w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 uppercase">
-                            Signup NOW
+                        <button type='submit' className="btn w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
+                            SIGNUP NOW
                         </button>
                     </form >
 
                     <div className="flex justify-between items-center mt-4 text-sm">
                         <a href="#" className="text-blue-500 hover:underline">Forgot Password?</a>
-                        <Link href="/login" className="text-blue-500 hover:underline">Already have an account? Sign in</Link>
+                        <Link href="signup" className="text-blue-500 hover:underline">Dont have an account? Sign Up</Link>
                     </div>
 
                     <div className="flex items-center my-6">
@@ -102,41 +103,35 @@ export default function Signup() {
                         <hr className="flex-grow border-t" />
                     </div>
 
-                    <div className="lg:flex justify-center gap-2 space-y-2 lg:space-y-0">
-                        <Link href={''} className='flex justify-center items-center gap-2 border rounded-md px-5 py-1 border-secondary text-xl'> <FcGoogle />Google</Link>
-                        <Link href={''} className='flex justify-center items-center gap-2 border rounded-md px-5 py-1 border-secondary text-xl '> <FaLinkedin className='text-secondary' />LinkedIn</Link>
-                        <Link href={''} className='flex justify-center items-center gap-2 border rounded-md px-5 py-1 border-secondary text-xl '> <FaFacebook className='text-secondary' />Facebook</Link>
+                    <SocialSignin></SocialSignin>
 
-                    </div>
-
-                    <div className="text-center mt-16">
-                        <p className='text-2xl lg:text-4xl mb-5'>DOWNLOAD OUR APP</p>
-                        <div className="flex justify-center items-center  ">
+                    <div className="text-center mt-5">
+                        <p className='text-2xl lg:text-3xl mb-2'>DOWNLOAD OUR APP</p>
+                        <div className="flex justify-center items-center ">
 
                             <Image
                                 src="/qrcode/qrcode.png"
                                 alt="qr code"
-                                width={140}
-                                height={140}
+                                width={120}
+                                height={120}
 
                             />
 
-                            <div className='space-y-5 '>
+                            <div>
                                 <Image
+                                    className='mb-2'
                                     src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                                    alt="Google Play"
+                                    alt="Google Play logo"
 
-                                    width={180}
-                                    height={250}
+                                    width={150}
+                                    height={45}
 
                                 />
                                 <Image
                                     src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                                    alt="Google Play"
-
-                                    width={180}
-                                    height={50}
-
+                                    alt="apple store logo"
+                                    width={150}
+                                    height={45}
                                 />
                             </div>
 
@@ -145,7 +140,7 @@ export default function Signup() {
                 </div>
 
                 {/* Right Section */}
-                <div className="lg:w-[500px] p-8  border border-secondary rounded-[20px]">
+                <div className="lg:w-[400px] p-5  border border-secondary rounded-[20px]">
                     <h2 className="text-4xl font-bold mb-6">Description</h2>
 
                     <ul className="space-y-4 text-xl">
@@ -174,7 +169,6 @@ export default function Signup() {
                 </div>
             </div>
         </div>
-
 
 
 

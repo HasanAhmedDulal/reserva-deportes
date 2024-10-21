@@ -33,7 +33,7 @@ export default function Navbar() {
 
     return (
         <div className='bg-white'>
-            <div className="max-w-screen-2xl px-2 mx-auto text-black">
+            <div className="container px-2 mx-auto text-black">
                 <div className="navbar px-0 ">
                     <div className="navbar-start relative">
                         <div className="dropdown">
@@ -47,22 +47,21 @@ export default function Navbar() {
                                 )}
                             </ul>
                         </div>
-                        <Link href={'/'}> <Image src='/logo/logo.png' alt="logo" width={70} height={70} /></Link>
+                        <Link href={'/'}> <Image src='/logo/logo.png' alt="logo" width={60} height={60} /></Link>
                     </div>
-                    <div className="navbar-center hidden lg:flex  justify-center space-x-10 text-md ">
+                    <div className="navbar-center hidden lg:flex  justify-center space-x-10 text-xl font-bold">
                         {menuItems.map((item, index) => <Link href={item.path} key={index} className='hover:bg-primary px-4 py-2 rounded'>{item.name}</Link>
                         )}
 
                     </div>
                     <div className="navbar-end ">
-                        {!session.data && <Link href={'/signup'}><button className="btn btn-primary h-6 w-28 text-white">Signup</button></Link>}
+                        {!session.data && <Link href={'/signup'}><button className="btn btn-primary h-3 w-28 text-white">Signup</button></Link>}
                         {session.data &&
                             <  >
-                                <button onClick={handleSignout} className="btn btn-primary w-24  text-white">Sign Out</button>
+                                <button onClick={handleSignout} className="btn btn-primary h-5 w-24  text-white">Sign Out</button>
                             </>
 
                         }
-
                     </div>
                 </div>
 

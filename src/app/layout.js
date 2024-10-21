@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
           <Header></Header>
           <Navbar></Navbar>
           <Banner></Banner>
-          <main className="max-w-screen-2xl px-2 mx-auto bg-white">{children}</main>
+          <main className="container px-2 mx-auto bg-white">{children}</main>
           <Footer></Footer>
         </AuthProvider>
       </body>

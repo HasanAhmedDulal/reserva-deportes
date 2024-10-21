@@ -19,7 +19,7 @@ export default function Login() {
         const result = await signIn('credentials', {
             email,
             password,
-            redirect: true,
+            redirect: false,
             callbackUrl: '/',
         });
 
@@ -43,13 +43,13 @@ export default function Login() {
 
     return (
 
-        <div className="flex items-center justify-center  py-16 ">
+        <div className="flex items-center justify-center  py-14 ">
             <div className="space-y-5 lg:space-y-0 flex-row-reverse lg:flex  gap-5 ">
                 {/* Left Section */}
-                <div className="lg:w-[450px] p-5  border border-secondary rounded-[20px] ">
-                    <h2 className="text-2xl lg:text-4xl font-bold text-center text-blue-600 mb-5 ">LOGIN NOW</h2>
+                <div className="lg:w-[400px] p-5  border border-secondary rounded-[20px] ">
+                    <h2 className="text-2xl lg:text-3xl font-bold text-center text-blue-600 mb-2 ">LOGIN NOW</h2>
 
-                    <form className="space-y-5" onSubmit={handleLogin}>
+                    <form className="space-y-3" onSubmit={handleLogin}>
                         <div>
                             <p className='mb-2'>Email</p>
                             <input
@@ -86,34 +86,33 @@ export default function Login() {
 
                     <SocialSignin></SocialSignin>
 
-                    <div className="text-center mt-10 ">
-                        <p className='text-2xl lg:text-4xl mb-5'>DOWNLOAD OUR APP</p>
-                        <div className="flex justify-center items-center  ">
+                    <div className="text-center mt-5">
+                        <p className='text-2xl lg:text-3xl mb-2'>DOWNLOAD OUR APP</p>
+                        <div className="flex justify-center items-center ">
 
                             <Image
                                 src="/qrcode/qrcode.png"
                                 alt="qr code"
-                                width={140}
-                                height={140}
+                                width={120}
+                                height={120}
 
                             />
 
-                            <div className='space-y-5 '>
+                            <div>
                                 <Image
+                                    className='mb-2'
                                     src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                                    alt="Google Play"
+                                    alt="Google Play logo"
 
-                                    width={180}
-                                    height={250}
+                                    width={150}
+                                    height={45}
 
                                 />
                                 <Image
                                     src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                                    alt="Google Play"
-
-                                    width={180}
-                                    height={50}
-
+                                    alt="apple store logo"
+                                    width={150}
+                                    height={45}
                                 />
                             </div>
 
@@ -122,7 +121,7 @@ export default function Login() {
                 </div>
 
                 {/* Right Section */}
-                <div className="lg:w-[450px] p-5  border border-secondary rounded-[20px]">
+                <div className="lg:w-[400px] p-5  border border-secondary rounded-[20px]">
                     <h2 className="text-4xl font-bold mb-6">Description</h2>
 
                     <ul className="space-y-4 text-xl">
