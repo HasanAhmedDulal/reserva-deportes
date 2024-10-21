@@ -30,7 +30,7 @@ export default function Footer() {
                                 </div>
 
                             </div>
-                            <div className='mt-10 '>
+                            <div className='mt-5'>
                                 <p className='mb-5'>Legal responsible: - Reservadeportes Demo </p>
                                 <p>Accepted payment methods:</p>
                                 <p>VISA/MASTERCARD</p>
