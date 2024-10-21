@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { IoMdMenu } from "react-icons/io";
 import Swal from 'sweetalert2';
+import Header from './Header';
 
 export default function Navbar() {
 
@@ -32,8 +33,10 @@ export default function Navbar() {
     ]
 
     return (
-        <div className='bg-white'>
-            <div className="container px-3 mx-auto text-black">
+        <div className='bg-white fixed top-0 left-0 right-0 bg-opacity-80'>
+
+            <Header></Header>
+            <div className="container px-5 mx-auto text-black ">
                 <div className="navbar px-0 ">
                     <div className="navbar-start relative">
                         <div className="dropdown">
