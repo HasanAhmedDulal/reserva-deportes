@@ -20,10 +20,10 @@ export default function SocialSignin() {
 
     return (
         <div className="md:flex justify-center space-y-2 gap-2 md:space-y-0">
-            <button onClick={() => handleSocialLogin('google')} className='flex justify-center items-center gap-2 border rounded-md px-2 py-1 border-secondary text-xl w-full '> <FcGoogle />Google
+            <button onClick={() => handleSocialLogin('google')} className='flex justify-center items-center gap-2 border rounded-md px-2 py-1 border-secondary w-full '> <FcGoogle />Google
             </button>
-            <button onClick={() => handleSocialLogin('linkedin')} className='flex justify-center items-center gap-2 border rounded-md px-2 py-1 border-secondary text-xl w-full '> <FaLinkedin className='text-secondary' />LinkedIn</button>
-            <button onClick={() => handleSocialLogin('facebook')} className='flex justify-center items-center gap-2 border rounded-md px-2 py-1 border-secondary text-xl w-full '> <FaFacebook className='text-secondary' />Facebook</button>
+            <button onClick={() => handleSocialLogin('linkedin')} className='flex justify-center items-center gap-2 border rounded-md px-2 py-1 border-secondary  w-full '> <FaLinkedin className='text-secondary' />LinkedIn</button>
+            <button onClick={() => handleSocialLogin('facebook')} className='flex justify-center items-center gap-2 border rounded-md px-2 py-1 border-secondary w-full '> <FaFacebook className='text-secondary' />Facebook</button>
 
         </div>
     )

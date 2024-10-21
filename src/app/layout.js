@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         <AuthProvider>
           <Header></Header>
           <Navbar></Navbar>
-          <Banner></Banner>
+          {/* <Banner></Banner> */}
           <main className="container px-2 mx-auto bg-white">{children}</main>
           <Footer></Footer>
         </AuthProvider>
