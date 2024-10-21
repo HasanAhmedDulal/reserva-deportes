@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
           {/* <Header></Header> */}
           <Navbar></Navbar>
           {/* <Banner></Banner> */}
-          <main className="container px-2 mx-auto  mt-36">{children}</main>
+          <main className="container px-2 mx-auto  mt-40">{children}</main>
           <Footer></Footer>
         </AuthProvider>
       </body>
