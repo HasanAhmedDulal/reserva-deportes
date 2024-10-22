@@ -4,7 +4,7 @@ import { useSession } from "next-auth/react";
 
 export default function LoadingProvider({ children }) {
     const session = useSession();
-    console.log(session)
+    // console.log(session)
     if (session.status === 'loading') {
         return (
 

@@ -6,12 +6,11 @@ import SocialSignin from '../SocialSignin/SocialSignin'
 import Swal from 'sweetalert2'
 import { IoMdArrowDropright } from 'react-icons/io';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation'
 
 
 export default function Login() {
-    const session = useSession();
-
-
+    const router = useRouter();
     const handleLogin = async (event) => {
         event.preventDefault();
         const email = event.target.email.value;
@@ -19,11 +18,10 @@ export default function Login() {
         const result = await signIn('credentials', {
             email,
             password,
-            redirect: true,
-            callbackUrl: '/',
+            redirect: false,
         });
         console.log(result)
-        if (session) {
+        if (result.status == 200) {
             Swal.fire({
                 position: "top-center",
                 icon: "success",
@@ -31,6 +29,7 @@ export default function Login() {
                 showConfirmButton: false,
                 timer: 1500
             });
+            router.push('/')
         }
 
 

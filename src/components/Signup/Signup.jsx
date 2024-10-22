@@ -9,25 +9,34 @@ import SocialSignin from '../SocialSignin/SocialSignin';
 
 export default function Signup() {
     const router = useRouter();
-    const handleSignup = async (event) => {
+    const handleSignup = (event) => {
         event.preventDefault();
+
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        const confirmpassword = event.target.confirmpassword.value;
+
+        if (password !== confirmpassword) {
+            return alert('passwor not patch')
+        }
         const newUser = {
-            name: event.target.name.value,
-            email: event.target.email.value,
-            password: event.target.password.value,
-            confirmpassword: event.target.confirmpassword.value,
+            name,
+            email,
+            password,
+            confirmpassword,
         }
 
+        console.log(newUser)
 
-        const resp = fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/signup/api`, {
+        const result = fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/signup/api`, {
             method: 'POST',
             body: JSON.stringify(newUser),
             headers: {
                 'content-type': 'application/json'
             }
         })
-
-        if (resp) {
+        if (result) {
             event.target.reset();
             Swal.fire({
                 position: "center-top",
