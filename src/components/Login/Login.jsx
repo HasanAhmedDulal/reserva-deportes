@@ -1,40 +1,24 @@
 'use client'
 
-import Image from 'next/image'
-import { signIn, useSession } from "next-auth/react"
+import { signIn } from "next-auth/react"
 import SocialSignin from '../SocialSignin/SocialSignin'
-import Swal from 'sweetalert2'
 import { IoMdArrowDropright } from 'react-icons/io';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation'
 
 
 export default function Login() {
-
-    const handleLogin = async (event) => {
+    const handleLogin = (event) => {
         event.preventDefault();
         const email = event.target.email.value;
         const password = event.target.password.value;
-        const result = await signIn('credentials', {
+        const result = signIn('credentials', {
             email,
             password,
-            redirect: true,
-            callbackUrl: '/'
+            redirect: false,
+            callbackUrl: '/',
         });
+
         console.log(result)
-        if (result.status == 200) {
-            Swal.fire({
-                position: "top-center",
-                icon: "success",
-                title: "Login Successfuly",
-                showConfirmButton: false,
-                timer: 1500
-            });
-
-        }
-
-
-
     };
 
 

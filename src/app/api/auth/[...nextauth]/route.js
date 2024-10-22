@@ -4,6 +4,7 @@ import CredentialsProvider from "next-auth/providers/credentials"
 import GoogleProvider from "next-auth/providers/google";
 import FacebookProvider from "next-auth/providers/facebook";
 import LinkedInProvider from "next-auth/providers/linkedin";
+import bcrypt from "bcrypt";
 
 
 const handler = NextAuth({
@@ -29,7 +30,8 @@ const handler = NextAuth({
                     return null;
                 }
 
-                if (password !== currentUser.password) {
+                const passwordMatched = bcrypt.compareSync(password, currentUser.password)
+                if (!passwordMatched) {
                     return null;
                 }
 
@@ -53,7 +55,33 @@ const handler = NextAuth({
     pages: {
         signIn: '/login',
     },
-    callbacks: {},
+    callbacks: {
+        async signIn({ user, account, }) {
+            if (account.provider === 'google' || account.provider === 'facebook') {
+                const { email } = user;
+                try {
+                    const db = await connectDB();
+                    const userCollection = await db.collection('users');
+                    const exist = await userCollection.findOne({ email })
+                    if (!exist) {
+                        const res = await userCollection.insertOne(user);
+                        return user
+                    } else {
+                        return user
+                    }
+
+                } catch (error) {
+                    console.log(error)
+                }
+
+
+            } else {
+                return user;
+            }
+
+        },
+
+    },
 
 })
 

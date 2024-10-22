@@ -9,9 +9,11 @@ import SocialSignin from '../SocialSignin/SocialSignin';
 
 export default function Signup() {
     const router = useRouter();
-    const handleSignup = (event) => {
-        event.preventDefault();
 
+
+
+    const handleSignup = async (event) => {
+        event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
@@ -24,19 +26,17 @@ export default function Signup() {
             name,
             email,
             password,
-            confirmpassword,
         }
 
-        console.log(newUser)
-
-        const result = fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/signup/api`, {
+        const result = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/signup/api`, {
             method: 'POST',
             body: JSON.stringify(newUser),
             headers: {
                 'content-type': 'application/json'
             }
         })
-        if (result) {
+
+        if (result.status === 200) {
             event.target.reset();
             Swal.fire({
                 position: "center-top",
@@ -48,6 +48,8 @@ export default function Signup() {
             router.push('/');
         }
     }
+
+
     return (
 
         <div className="container px-2 mx-auto text-white  p-10">
@@ -95,7 +97,7 @@ export default function Signup() {
                                 />
                             </div>
                             <button type='submit' className="btn w-full  text-white py-2 rounded-md bg-blue-600 hover:bg-blue-700">
-                                LOGIN NOW
+                                SIGNUP NOW
                             </button>
                         </form >
 

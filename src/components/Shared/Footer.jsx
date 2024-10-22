@@ -8,7 +8,7 @@ export default function Footer() {
         <div className='bg-[#202124] text-white pt-5'>
             <div className="container  mx-auto md:px-10 px-14 lg:px-24 ">
                 <div className="grid md:grid-cols-1 lg:grid-cols-3   ">
-                    <div className=' flex justify-start '>
+                    <div className=' flex justify-start pr-5'>
                         <div >
                             <div className='flex gap-5 justify-center lg:justify-start'>
                                 <div className='w-14'>
@@ -115,7 +115,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className=' footer-center pb-5 mt-5'>
+            <div className=' footer-center pb-5 mt-5 px-14'>
                 <p>Copyright © {new Date().getFullYear()} powered by ReservaDeportes ® | Reservadeportes Demo | info@reservadeportes.com</p>
             </div>
         </div>

@@ -5,7 +5,7 @@ let db;
 export const connectDB = async () => {
     if (db) return db;
     try {
-        // const { MongoClient, ServerApiVersion } = require('mongodb');
+
         const uri = `mongodb+srv://mdhelal:${process.env.NEXT_PUBLIC_MONGODB_PASS}@cluster0.qvtbg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
         // Create a MongoClient with a MongoClientOptions object to set the Stable API version

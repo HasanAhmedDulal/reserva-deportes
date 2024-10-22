@@ -9,7 +9,7 @@ import Header from './Header';
 export default function Navbar() {
 
     const session = useSession();
-
+    console.log(session)
     const handleSignout = () => {
         signOut();
         if (session)

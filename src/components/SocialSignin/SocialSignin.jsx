@@ -1,21 +1,21 @@
 
-import { signIn } from 'next-auth/react';
+import { signIn, useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 import React from 'react'
 import { FaFacebook, FaLinkedin } from 'react-icons/fa6';
 import { FcGoogle } from "react-icons/fc";
 
 export default function SocialSignin() {
+    const router = useRouter();
+    const session = useSession();
 
-    const handleSocialLogin = async (provider) => {
-        const resp = await signIn(provider, { redirect: false });
-        Swal.fire({
-            position: "top-center",
-            icon: "success",
-            title: `${provider} Login Successfuly`,
-            showConfirmButton: false,
-            timer: 1500
+    const handleSocialLogin = (provider) => {
+        const result = signIn(provider, {
+            redirect: true,
         });
-
+    }
+    if (session.status === 'authenticated') {
+        router.push('/')
     }
 
     return (

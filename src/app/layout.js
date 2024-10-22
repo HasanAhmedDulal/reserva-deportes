@@ -37,7 +37,6 @@ export default function RootLayout({ children }) {
 
         <AuthProvider>
           <LoadingProvider>
-
             <Navbar></Navbar>
             {/* <Banner></Banner> */}
             <main className="container px-2 mx-auto mt-[208px] lg:mt-[155px]">{children}</main>
