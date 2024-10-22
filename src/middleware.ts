@@ -9,7 +9,7 @@ export const middleware = (request) => {
     const path = request.nextUrl.pathname;
     const publicPath = path === '/login' || path === '/signup'
     //                  __Secure-
-    const token = cookies(request).get('__Secure-next-auth.session-token');
+    const token = cookies(request).get('next-auth.session-token');
 
 
     if (publicPath && token?.value) {
@@ -20,7 +20,7 @@ export const middleware = (request) => {
         return NextResponse.redirect(new URL('/login', request.url));
     }
 
-    // return NextResponse.next();
+    return NextResponse.next();
 
 };
 
