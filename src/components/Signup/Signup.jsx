@@ -1,10 +1,7 @@
 'use client'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation';
 import React from 'react'
-import { FaFacebook, FaLinkedin } from 'react-icons/fa6';
-import { FcGoogle } from "react-icons/fc";
 import { IoMdArrowDropright } from 'react-icons/io';
 import Swal from 'sweetalert2';
 import SocialSignin from '../SocialSignin/SocialSignin';
@@ -44,9 +41,9 @@ export default function Signup() {
     }
     return (
 
-        <div className="container px-2 mx-auto text-white ">
-            <div className="flex items-center justify-center  p-10 ">
-                <div className="space-y-5 lg:space-y-0 flex-row-reverse lg:flex  gap-5 bg-white text-black p-10">
+        <div className="container px-2 mx-auto text-white  p-10">
+            <div className="flex items-center justify-center  ">
+                <div className="space-y-5 lg:space-y-0 flex-row-reverse lg:flex  gap-5 bg-white text-black p-5 lg:p-10">
                     {/* Left Section */}
                     <div className="lg:w-[400px] p-5  border border-secondary rounded-[20px] ">
                         <h2 className="text-2xl lg:text-3xl font-bold text-center text-blue-600 mb-2 ">SIGNUP NOW</h2>

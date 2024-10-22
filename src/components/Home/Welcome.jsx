@@ -5,7 +5,7 @@ export default function Welcome() {
         <div className="py-16 mx-auto ">
             <div className=" text-center ">
                 <h1 className="text-5xl md:text-8xl font-bold text-blue-600">Welcome to  <br />Reserva Deportes</h1>
-                <p className="p-6 text-2xl text-white">
+                <p className="p-6 text-2xl text-gradient-to-r from-violet-500 to-fuchsia-500">
                     Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
 
                 </p>

@@ -12,14 +12,15 @@ export default function Navbar() {
 
     const handleSignout = () => {
         signOut();
-        Swal.fire({
-            position: "top-center",
-            icon: "success",
-            iconColor: "#EF4C53",
-            title: 'Logout Successfuly',
-            showConfirmButton: false,
-            timer: 1500
-        });
+        if (session)
+            Swal.fire({
+                position: "top-center",
+                icon: "success",
+                iconColor: "#EF4C53",
+                title: 'Logout Successfuly',
+                showConfirmButton: false,
+                timer: 1500
+            });
     }
 
 

@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { FaFacebook, FaLinkedin, FaSquareInstagram, FaSquareXTwitter, } from "react-icons/fa6";
+
 export default function Footer() {
     return (
         <div className='bg-[#202124] text-white pt-5'>
