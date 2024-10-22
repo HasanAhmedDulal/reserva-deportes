@@ -14,11 +14,10 @@ export default function Login() {
         const result = signIn('credentials', {
             email,
             password,
-            redirect: false,
+            redirect: true,
             callbackUrl: '/',
         });
 
-        console.log(result)
     };
 
 
